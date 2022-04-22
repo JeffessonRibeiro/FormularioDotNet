@@ -8,7 +8,7 @@ namespace Infra.Contexto.Maps
     {
         public void Configure(EntityTypeBuilder<Carro> builder)
         {
-            builder.ToTable("Mesas");
+            builder.ToTable("Carros");
             builder.HasKey(c => c.Id);
             builder.Property(c => c.Modelo).IsRequired().HasColumnType("Varchar(25)");
             builder.Property(c => c.QuantidadePortas).HasColumnType("int");

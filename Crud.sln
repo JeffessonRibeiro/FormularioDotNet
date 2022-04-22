@@ -5,19 +5,19 @@ VisualStudioVersion = 17.1.32414.318
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WepApp", "WepApp", "{45C2B496-F4DE-48BD-AFB0-6142978CF730}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApp", "src\WebApp\WebApp.csproj", "{B9473DF6-727D-44CB-867D-3CC65337EEBE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApp", "src\WebApp\WebApp.csproj", "{B9473DF6-727D-44CB-867D-3CC65337EEBE}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dominio", "Dominio", "{46852E73-0403-4EB7-B20A-0CAFFC0033C4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dominio", "src\Dominio\Dominio.csproj", "{20C0A6CF-89C6-450F-931B-9B0A2D6B3F98}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dominio", "src\Dominio\Dominio.csproj", "{20C0A6CF-89C6-450F-931B-9B0A2D6B3F98}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infra", "Infra", "{9FBA76F4-B994-4E9E-952B-9807AF495CC1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infra", "src\Infra\Infra.csproj", "{ED73C841-0CF1-4F73-BFDA-706C2C3C7270}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infra", "src\Infra\Infra.csproj", "{ED73C841-0CF1-4F73-BFDA-706C2C3C7270}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Historia", "Historia", "{09FAD06B-469A-4056-A42F-AD0E400BB122}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Historia", "src\Historia\Historia.csproj", "{EAACB28C-B0E7-4BA8-BDB1-39F0D0747F0A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Historia", "src\Historia\Historia.csproj", "{EAACB28C-B0E7-4BA8-BDB1-39F0D0747F0A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

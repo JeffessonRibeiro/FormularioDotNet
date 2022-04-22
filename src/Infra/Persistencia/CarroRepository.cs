@@ -1,5 +1,7 @@
 ﻿using Dominio.Entidade;
 using Dominio.IRepository;
+using Infra.Contexto;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,29 +12,40 @@ namespace Infra.Persistencia
 {
     public class CarroRepository : ICarroRepository
     {
-        public Task<Carro> Adicionar(Carro carro)
+        private readonly DataContext _DataContext;
+
+        public CarroRepository(DataContext dataContext)
         {
-            throw new NotImplementedException();
+            _DataContext = dataContext;
         }
 
-        public Task<Carro> BuscarId(Guid id)
+        public async Task Adicionar(Carro carro)
         {
-            throw new NotImplementedException();
+            _DataContext.Carros.Add(carro);
+            await _DataContext.SaveChangesAsync();
+        }
+        public async Task Delete(Carro carro)
+        {
+            _DataContext.Carros.Remove(carro);
+            await _DataContext.SaveChangesAsync();
         }
 
-        public Task<IEnumerable<Carro>> BuscarTodos()
+        public async Task Editar(Carro carro)
         {
-            throw new NotImplementedException();
+            _DataContext.Carros.Update(carro);
+            await _DataContext.SaveChangesAsync();
         }
 
-        public Task Delete(Carro carro)
+        public async Task<Carro> BuscarId(Guid id)
         {
-            throw new NotImplementedException();
+            return await _DataContext.Carros.FirstOrDefaultAsync(c => c.Id.Equals(id));
         }
 
-        public Task<Carro> Editar(Carro carro)
+        public async Task<IEnumerable<Carro>> BuscarTodos()
         {
-            throw new NotImplementedException();
+            return await _DataContext.Carros.AsNoTracking().ToListAsync();
         }
+
+
     }
 }
